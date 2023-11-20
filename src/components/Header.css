@@ -1,0 +1,20 @@
+.menu{
+    background-color: gray;
+    font-size: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.luzinha:hover{
+    transition: 0.5s;
+    color:yellow;
+    opacity: 0.3;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
