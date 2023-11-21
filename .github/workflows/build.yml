@@ -3,7 +3,7 @@ on:
     push:
         branches:
             - main ###IMPORTANTE: Isso diz que o código será rodado uando houverem pushes 
-                   na main (preferivelmente coloque mais branches, nunca dê push na main)
+                   ##na main (preferivelmente coloque mais branches, nunca dê push na main)
 jobs: #tarefas a fazer
     deploy:
         runs-on: ubuntu-20.04 #OS do servidor que o Pages vai hospedar
