@@ -1,21 +1,20 @@
-name: deploy 
+name: deploy
 on:
   push:
-    branches: 
-      - main ###IMPORTANTE: Isso diz que o código será rodado uando houverem pushes na main (preferivelmente coloque mais branches, nunca dê push na main)
-jobs: #tarefas a fazer
+    branches:
+      - main
+jobs:
   deploy:
-    runs-on: ubuntu-20.04 #OS do servidor que o Pages vai hospedar
-    steps: #indica as tecnologias a serem usadas
+    runs-on: ubuntu-20.04
+    steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-        with: #indica qual versão do node usar
-          node-version: '18.x' #18.0 pra cima
+        with:
+          node-version: '18.x'
       - name: Build web-app
         run: |
-          npm ci 
-          npm run build 
-        #faz a build do projeto
+          npm ci
+          npm run build
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
